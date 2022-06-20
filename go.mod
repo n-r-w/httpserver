@@ -3,8 +3,8 @@ module github.com/n-r-w/httpserver
 go 1.18
 
 require (
-	github.com/n-r-w/lg v0.0.0-20220619185307-1ce2595e5af1
-	github.com/n-r-w/nerr v0.0.0-20220619185355-db96d29f985d
+	github.com/n-r-w/lg v1.0.0
+	github.com/n-r-w/nerr v1.0.0
 )
 
 require (
@@ -15,7 +15,7 @@ require (
 	github.com/jackc/pgproto3/v2 v2.3.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b // indirect
 	github.com/lib/pq v1.10.6 // indirect
-	github.com/n-r-w/eno v0.0.0-20220619184937-425cde54ada1 // indirect
+	github.com/n-r-w/eno v1.0.0 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
 	golang.org/x/crypto v0.0.0-20210711020723-a769d52b0f97 // indirect
 	golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1 // indirect
