@@ -60,8 +60,8 @@ github.com/mattn/go-isatty v0.0.5/go.mod h1:Iq45c/XA43vh69/j3iqttzPXn0bhXyGjM0Hd
 github.com/mattn/go-isatty v0.0.7/go.mod h1:Iq45c/XA43vh69/j3iqttzPXn0bhXyGjM0Hdxcsrc5s=
 github.com/n-r-w/eno v1.0.0 h1:6B5ZBfbuTdfcjzFu+8EN1797Zp06S7Iy+zCvO/ymHl4=
 github.com/n-r-w/eno v1.0.0/go.mod h1:602sG4zbQuxCJQRvjRYAuyiVNV9TbBA1te7o5L63+nc=
-github.com/n-r-w/lg v1.0.0 h1:AV8ajdXqfFkN2bVsNvhTXEhBYlas/GTX351O3QtxdLw=
-github.com/n-r-w/lg v1.0.0/go.mod h1:/yrLc0g9V88Mo0uaSHVrI+gKXZBjyCrBJchgsSQeNVo=
+github.com/n-r-w/lg v1.0.1 h1:KBHAIEY5uulsj/1ZbAwLw8IDAVgFIA6Lkqql6RZlxWc=
+github.com/n-r-w/lg v1.0.1/go.mod h1:/yrLc0g9V88Mo0uaSHVrI+gKXZBjyCrBJchgsSQeNVo=
 github.com/n-r-w/nerr v1.0.1 h1:OWrUh8I7b8UGEjNknCpFWV2FGKZCbvZQy08pr4UfnvM=
 github.com/n-r-w/nerr v1.0.1/go.mod h1:hbaOtKi/OrKLYvuuPBAbJQzvtNNeR9fGM8bPLLwTutg=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=

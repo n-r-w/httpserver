@@ -3,7 +3,7 @@ module github.com/n-r-w/httpserver
 go 1.18
 
 require (
-	github.com/n-r-w/lg v1.0.0
+	github.com/n-r-w/lg v1.0.1
 	github.com/n-r-w/nerr v1.0.1
 )
 
