@@ -44,21 +44,21 @@ func New(handler http.Handler, logger lg.Logger, opts ...Option) *Server {
 		opt(s)
 	}
 
-	s.start()
+	go s.start()
 
 	return s
 }
 
 func (s *Server) start() {
-	go func() {
-		l, err := net.Listen("tcp", s.server.Addr)
-		if err == nil {
-			s.logger.Info("server started on port %s", s.server.Addr)
-			err = s.server.Serve(l)
-		}
+	l, err := net.Listen("tcp", s.server.Addr)
+	if err == nil {
+		s.logger.Info("http server started on %s", s.server.Addr)
+		err = s.server.Serve(l)
+	}
+	if err != nil {
 		s.notify <- nerr.New("net.Listen error", err)
-		close(s.notify)
-	}()
+	}
+	close(s.notify)
 }
 
 func (s *Server) Notify() <-chan error {
