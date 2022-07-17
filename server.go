@@ -18,14 +18,14 @@ const (
 	defaultShutdownTimeout = 3 * time.Second
 )
 
-type Server struct {
+type Service struct {
 	server          *http.Server
 	logger          lg.Logger
 	notify          chan error
 	shutdownTimeout time.Duration
 }
 
-func New(handler http.Handler, logger lg.Logger, opts ...Option) *Server {
+func New(handler http.Handler, logger lg.Logger, opts ...Option) *Service {
 	httpServer := &http.Server{
 		Handler:      handler,
 		ReadTimeout:  defaultReadTimeout,
@@ -33,7 +33,7 @@ func New(handler http.Handler, logger lg.Logger, opts ...Option) *Server {
 		Addr:         defaultAddr,
 	}
 
-	s := &Server{
+	s := &Service{
 		server:          httpServer,
 		logger:          logger,
 		notify:          make(chan error, 1),
@@ -49,7 +49,7 @@ func New(handler http.Handler, logger lg.Logger, opts ...Option) *Server {
 	return s
 }
 
-func (s *Server) start() {
+func (s *Service) start() {
 	l, err := net.Listen("tcp", s.server.Addr)
 	if err == nil {
 		s.logger.Info("http server started on %s", s.server.Addr)
@@ -61,11 +61,11 @@ func (s *Server) start() {
 	close(s.notify)
 }
 
-func (s *Server) Notify() <-chan error {
+func (s *Service) Notify() <-chan error {
 	return s.notify
 }
 
-func (s *Server) Shutdown() error {
+func (s *Service) Shutdown() error {
 	ctx, cancel := context.WithTimeout(context.Background(), s.shutdownTimeout)
 	defer cancel()
 

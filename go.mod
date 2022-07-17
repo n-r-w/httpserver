@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/n-r-w/lg v1.0.2
-	github.com/n-r-w/nerr v1.0.5
+	github.com/n-r-w/nerr v1.1.0
 )
 
 require (
